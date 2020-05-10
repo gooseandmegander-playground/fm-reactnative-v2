@@ -3,13 +3,19 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function ColorBox({ theme, hexCode }) {
   const themeColor = { backgroundColor: hexCode };
+  const textColor = { color: setTextColor(hexCode) };
   return (
     <View style={[styles.box, themeColor]}>
-      <Text style={typography.boxText}>
+      <Text style={[typography.boxText, textColor]}>
         {theme}: {hexCode}
       </Text>
     </View>
   );
+}
+
+function setTextColor(hexCode) {
+  const middleValue = '#b7b7b7';
+  return hexCode <= middleValue ? 'white' : 'black';
 }
 
 const typography = StyleSheet.create({
