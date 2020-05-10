@@ -14,8 +14,8 @@ export default function ColorBox({ theme, hexCode }) {
 }
 
 function setTextColor(hexCode) {
-  const middleValue = '#b7b7b7';
-  return hexCode <= middleValue ? 'white' : 'black';
+  const isTextBlack = parseInt(hexCode.replace('#', ''), 16) > 0xffffff / 1.1;
+  return isTextBlack ? 'black' : 'white';
 }
 
 const typography = StyleSheet.create({
