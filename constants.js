@@ -38,3 +38,5 @@ export const COLOR_PALETTES = [
   { paletteName: 'Rainbow', colors: RAINBOW },
   { paletteName: 'Frontend Masters', colors: FRONTEND_MASTERS },
 ];
+
+export const PREVIEW_COUNT = 5;
