@@ -27,7 +27,12 @@ const styles = StyleSheet.create({
   box: {
     borderRadius: 2,
     marginVertical: 6,
-    paddingVertical: 8,
+    paddingVertical: 10,
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
+    elevation: 2, // Android only
   },
 });
